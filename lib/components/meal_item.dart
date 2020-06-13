@@ -11,7 +11,9 @@ class MealItem extends StatelessWidget {
     Navigator.of(context).pushNamed(
       AppRoutes.MEAL_DETAIL,
       arguments: meal,
-    );
+    ).then((res){ // get params when close page
+      print(res);
+    });
   }
 
   @override
@@ -35,6 +37,7 @@ class MealItem extends StatelessWidget {
                     height: 250,
                     width: double.infinity,
                     fit: BoxFit.cover,
+                    
                   ),
                 ),
                 Positioned(
